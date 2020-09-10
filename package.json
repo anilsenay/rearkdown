@@ -1,6 +1,6 @@
 {
   "name": "rearkdown",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rearkdown is a react component for using your custom component in markdown files",
   "private": false,
   "babel": {
@@ -8,7 +8,7 @@
       "@babel/preset-react"
     ]
   },
-  "main": "./lib/index.tsx",
+  "main": "./lib/index.js",
   "types": "lib",
   "files": [
     "lib"
