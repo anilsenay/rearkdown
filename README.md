@@ -59,6 +59,8 @@ look like:
 
 - `file` - a markdown file you imported
 - `components` - An array to import your component into markdown file
+- `overrides` - Assign new components to default html tags
+- `options` - Other options which markdown-to-jsx provides. (forceBlock, forceInline etc.)
 
 ## Full example
 
@@ -115,6 +117,50 @@ look like:
 ##### Example screenshot
 
 ![screenshot](https://i.ibb.co/0j61qvX/Screenshot-20200910-174254.png)
+
+## Overrides
+
+You can change default HTML tags with a component.
+
+```js
+overrides={{ h1: MyH1Component, p: MyParagraph }}
+```
+
+```js
+
+<Rearkdown
+    file={markdownFile}
+    components={[CustomComponent, AnotherComponent]}
+    overrides={{ h1: MyH1Component, p: MyParagraph }}
+/>
+
+```
+
+## Options
+
+You can add other markdown-to-jsx options.
+- [forceBlock](https://www.npmjs.com/package/markdown-to-jsx#optionsforceblock)
+- [forceInline](https://www.npmjs.com/package/markdown-to-jsx#optionsforceinline)
+- [namedCodesToUnicode](https://www.npmjs.com/package/markdown-to-jsx#optionsnamedcodestounicode)
+- [disableParsingRawHTML](https://www.npmjs.com/package/markdown-to-jsx#optionsdisableparsingrawhtml)
+- [slugify](https://www.npmjs.com/package/markdown-to-jsx#optionsslugify)
+
+```js
+options={{ forceBlock: true }}
+---
+options={{ forceBlock: true, forceInline: true, slugify: str => str }}
+```
+
+```js
+
+<Rearkdown
+    file={markdownFile}
+    components={[CustomComponent, AnotherComponent]}
+    overrides={{ h1: MyH1Component, p: MyParagraph }}
+    options={{ forceBlock: true }}
+/>
+
+```
 
 ## Help us!
 
