@@ -1,6 +1,6 @@
 {
   "name": "rearkdown",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Rearkdown is a react component for using your custom component in markdown files",
   "private": false,
   "babel": {
@@ -18,8 +18,7 @@
     "markdown-to-jsx": "^7.0.0"
   },
   "scripts": {
-    "build": "tsc -p .",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
+    "build": "tsc -p ."
   },
   "eslintConfig": {
     "extends": "react-app"
