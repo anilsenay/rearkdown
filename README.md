@@ -1,6 +1,5 @@
 [![npm version](https://badge.fury.io/js/rearkdown.svg)](https://badge.fury.io/js/rearkdown) ![Repo size](https://img.shields.io/github/repo-size/anilsenay/rearkdown.svg) [![downloads](https://img.shields.io/npm/dm/rearkdown.svg)](https://npm-stat.com/charts.html?package=rearkdown) ![License](https://img.shields.io/npm/l/rearkdown.svg)
 
-
 # Rearkdown
 
 Rearkdown is a react component for using your custom component in markdown files.
@@ -27,7 +26,7 @@ function App() {
     <div>
       <Rearkdown
         file={markdownFile}
-        components={[CustomComponent, AnotherComponent]}
+        components={{ CustomComponent, AnotherComponent }}
       />
     </div>
   );
@@ -61,7 +60,7 @@ look like:
 ## Props
 
 - `file` - a markdown file you imported
-- `components` - An array to import your component into markdown file
+- `components` - An object of components to import your component into markdown file
 - `overrides` - Assign new components to default html tags
 - `options` - Other options which markdown-to-jsx provides. (forceBlock, forceInline etc.)
 
@@ -91,7 +90,7 @@ const RoughComponent = ({ type, color, children }) => {
 function App() {
   return (
     <div className="App">
-      <Rearkdown file={markdownFile} components={[RoughComponent]} />
+      <Rearkdown file={markdownFile} components={{ RoughComponent }} />
     </div>
   );
 }
@@ -121,6 +120,29 @@ look like:
 
 ![screenshot](https://i.ibb.co/0j61qvX/Screenshot-20200910-174254.png)
 
+## Components
+
+You can add your custom components to use in markdown file.
+
+```js
+components={{ MyComponent, AnotherComponent }}
+```
+
+```js
+<Rearkdown
+  file={markdownFile}
+  components={{ CustomComponent, AnotherComponent }}
+/>
+```
+
+#### Also you can set new name to your components
+
+```js
+components={{ "HelloWorld": MyComponent, AnotherComponent }}
+```
+
+Now your **MyComponent** will be used as `<HelloWorld>` in markdown file.
+
 ## Overrides
 
 You can change default HTML tags with a component.
@@ -130,18 +152,17 @@ overrides={{ h1: MyH1Component, p: MyParagraph }}
 ```
 
 ```js
-
 <Rearkdown
-    file={markdownFile}
-    components={[CustomComponent, AnotherComponent]}
-    overrides={{ h1: MyH1Component, p: MyParagraph }}
+  file={markdownFile}
+  components={{ CustomComponent, AnotherComponent }}
+  overrides={{ h1: MyH1Component, p: MyParagraph }}
 />
-
 ```
 
 ## Options
 
 You can add other markdown-to-jsx options.
+
 - [forceBlock](https://www.npmjs.com/package/markdown-to-jsx#optionsforceblock)
 - [forceInline](https://www.npmjs.com/package/markdown-to-jsx#optionsforceinline)
 - [namedCodesToUnicode](https://www.npmjs.com/package/markdown-to-jsx#optionsnamedcodestounicode)
@@ -155,14 +176,12 @@ options={{ forceBlock: true, forceInline: true, slugify: str => str }}
 ```
 
 ```js
-
 <Rearkdown
-    file={markdownFile}
-    components={[CustomComponent, AnotherComponent]}
-    overrides={{ h1: MyH1Component, p: MyParagraph }}
-    options={{ forceBlock: true }}
+  file={markdownFile}
+  components={{ CustomComponent, AnotherComponent }}
+  overrides={{ h1: MyH1Component, p: MyParagraph }}
+  options={{ forceBlock: true }}
 />
-
 ```
 
 ## Help us!
