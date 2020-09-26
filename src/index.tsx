@@ -3,7 +3,7 @@ import Markdown from "markdown-to-jsx";
 
 interface Props {
   file: string;
-  components?: Array<React.FC | React.Component | any>;
+  components?: object;
   overrides?: object;
   options?: object;
 }
@@ -23,25 +23,21 @@ export const Rearkdown: React.FC<Props> = ({
       .catch((err) => console.error(err));
   }, [file]);
 
+  const overridesObject: any = Object.assign(
+    { ...overrides },
+    ...Object.entries(components).map((items) => {
+      console.log(items);
+      if (items[0] && items[1]) return { [items[0]]: { component: items[1] } };
+    })
+  );
+
   return (
     <div>
       {state && (
         <Markdown
           children={state}
           options={{
-            slugify: (str) => str,
-            overrides:
-              components.length > 0
-                ? Object.assign(
-                    { ...overrides },
-                    ...components?.map((item: any) => {
-                      const name: string = item.name;
-                      return { [name]: { component: item } };
-                    })
-                  )
-                : {
-                    ...overrides,
-                  },
+            overrides: overridesObject,
             ...options,
           }}
         />
