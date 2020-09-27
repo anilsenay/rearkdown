@@ -1,5 +1,5 @@
-import * as React from "react";
-import Markdown from "markdown-to-jsx";
+import * as React from 'react';
+import Markdown from 'markdown-to-jsx';
 
 interface Props {
   file: string;

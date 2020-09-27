@@ -50,6 +50,7 @@
     "react-scripts": "3.4.3",
     "typescript": "^3.9.7"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anilsenay/rearkdown.git"
