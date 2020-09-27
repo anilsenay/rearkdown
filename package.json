@@ -1,5 +1,5 @@
 {
-  "name": "rearkdown",
+  "name": "@anilsenay/rearkdown",
   "version": "0.1.7",
   "description": "Rearkdown is a react component for using your custom component in markdown files",
   "private": false,
