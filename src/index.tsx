@@ -3,10 +3,17 @@ import Markdown from 'markdown-to-jsx';
 
 interface Props {
   file: string;
-  components: Array<React.FC | React.Component | any>;
+  components?: object;
+  overrides?: object;
+  options?: object;
 }
 
-export const Rearkdown: React.FC<Props> = ({ file, components }) => {
+export const Rearkdown: React.FC<Props> = ({
+  file,
+  components = {},
+  overrides,
+  options,
+}) => {
   const [state, setState] = React.useState("");
 
   React.useEffect(() => {
@@ -16,10 +23,11 @@ export const Rearkdown: React.FC<Props> = ({ file, components }) => {
       .catch((err) => console.error(err));
   }, [file]);
 
-  console.log(
-    ...components?.map((item: any) => {
-      const name: string = item.name;
-      return { [name]: { component: item } };
+  const overridesObject: any = Object.assign(
+    { ...overrides },
+    ...Object.entries(components).map((items) => {
+      console.log(items);
+      if (items[0] && items[1]) return { [items[0]]: { component: items[1] } };
     })
   );
 
@@ -29,15 +37,8 @@ export const Rearkdown: React.FC<Props> = ({ file, components }) => {
         <Markdown
           children={state}
           options={{
-            overrides:
-              components &&
-              Object.assign(
-                {},
-                ...components?.map((item: any) => {
-                  const name: string = item.name;
-                  return { [name]: { component: item } };
-                })
-              ),
+            overrides: overridesObject,
+            ...options,
           }}
         />
       )}
