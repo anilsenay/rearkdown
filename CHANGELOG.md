@@ -1,3 +1,9 @@
+## [0.1.7] - 2020-09-27
+
+### Fixed
+
+- Fix: components prop type fixed
+
 ## [0.1.5] - 2020-09-26
 
 ### Added
