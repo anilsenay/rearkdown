@@ -10,7 +10,7 @@ interface Props {
 
 export const Rearkdown: React.FC<Props> = ({
   file,
-  components = [],
+  components = {},
   overrides,
   options,
 }) => {
