@@ -1,7 +1,7 @@
 import * as React from "react";
 interface Props {
     file: string;
-    components?: Array<React.FC | React.Component | any>;
+    components?: object;
     overrides?: object;
     options?: object;
 }
