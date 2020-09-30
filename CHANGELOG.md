@@ -1,3 +1,13 @@
+## [0.1.8] - 2020-09-27
+
+### Delete
+
+- Console.log deleted
+
+### Change
+
+- Change state's name ( state => convertedFile )
+
 ## [0.1.7] - 2020-09-27
 
 ### Fixed
