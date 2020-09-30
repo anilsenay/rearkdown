@@ -6,9 +6,12 @@
 
 ## [0.1.5] - 2020-09-26
 
-### Added
+### Fixed
 
 - Fix: Custom components were not working after build
+
+### Changed
+
 - components prop is a object instead of array now. => components={{CustomComponent, AnotherComponent}}
 
 ## [0.1.4] - 2020-09-15
