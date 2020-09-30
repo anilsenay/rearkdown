@@ -14,12 +14,12 @@ export const Rearkdown: React.FC<Props> = ({
   overrides,
   options,
 }) => {
-  const [state, setState] = React.useState("");
+  const [convertedFile, setConvertedFile] = React.useState("");
 
   React.useEffect(() => {
     fetch(file)
       .then((res) => res.text())
-      .then((post) => setState(post))
+      .then((post) => setConvertedFile(post))
       .catch((err) => console.error(err));
   }, [file]);
 
@@ -32,9 +32,9 @@ export const Rearkdown: React.FC<Props> = ({
 
   return (
     <div>
-      {state && (
+      {convertedFile && (
         <Markdown
-          children={state}
+          children={convertedFile}
           options={{
             overrides: overridesObject,
             ...options,
