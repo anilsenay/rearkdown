@@ -26,7 +26,6 @@ export const Rearkdown: React.FC<Props> = ({
   const overridesObject: any = Object.assign(
     { ...overrides },
     ...Object.entries(components).map((items) => {
-      console.log(items);
       if (items[0] && items[1]) return { [items[0]]: { component: items[1] } };
     })
   );
