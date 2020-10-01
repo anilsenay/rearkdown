@@ -28,6 +28,7 @@
 - Changelog added.
 
 [unreleased]: https://github.com/Anilsenay/rearkdown/commits/master
+[0.1.8]: https://github.com/Anilsenay/rearkdown/releases/tag/0.1.8
 [0.1.7]: https://github.com/Anilsenay/rearkdown/releases/tag/0.1.7
 [0.1.5]: https://github.com/Anilsenay/rearkdown/releases/tag/0.1.5
 [0.1.4]: https://github.com/Anilsenay/rearkdown/releases/tag/0.1.4
