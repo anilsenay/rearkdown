@@ -60,7 +60,7 @@ look like:
 
 ## Props
 
-- `file` - a markdown file you imported
+- `file`<sup>required</sup> - a markdown file you imported
 - `components` - An object of components to import your component into markdown file
 - `overrides` - Assign new components to default html tags
 - `options` - Other options which markdown-to-jsx provides. (forceBlock, forceInline etc.)
