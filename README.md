@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/rearkdown.svg)](https://badge.fury.io/js/rearkdown) ![Repo size](https://img.shields.io/github/repo-size/anilsenay/rearkdown.svg) [![downloads](https://img.shields.io/npm/dm/rearkdown.svg)](https://npm-stat.com/charts.html?package=rearkdown) ![License](https://img.shields.io/npm/l/rearkdown.svg) [![contributors](https://img.shields.io/github/contributors/anilsenay/rearkdown.svg)](https://img.shields.io/github/contributors/anilsenay/rearkdown)
+[![npm version](https://badge.fury.io/js/rearkdown.svg)](https://badge.fury.io/js/rearkdown) [![GitHub version](https://badge.fury.io/gh/anilsenay%2Frearkdown.svg)](https://badge.fury.io/gh/anilsenay%2Frearkdown) ![Repo size](https://img.shields.io/github/repo-size/anilsenay/rearkdown.svg) [![downloads](https://img.shields.io/npm/dm/rearkdown.svg)](https://npm-stat.com/charts.html?package=rearkdown) ![License](https://img.shields.io/npm/l/rearkdown.svg) [![contributors](https://img.shields.io/github/contributors/anilsenay/rearkdown.svg)](https://img.shields.io/github/contributors/anilsenay/rearkdown)
 
 # Rearkdown
 
