@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/rearkdown.svg)](https://badge.fury.io/js/rearkdown) ![Repo size](https://img.shields.io/github/repo-size/anilsenay/rearkdown.svg) [![downloads](https://img.shields.io/npm/dm/rearkdown.svg)](https://npm-stat.com/charts.html?package=rearkdown) ![License](https://img.shields.io/npm/l/rearkdown.svg)
+[![npm version](https://badge.fury.io/js/rearkdown.svg)](https://badge.fury.io/js/rearkdown) ![Repo size](https://img.shields.io/github/repo-size/anilsenay/rearkdown.svg) [![downloads](https://img.shields.io/npm/dm/rearkdown.svg)](https://npm-stat.com/charts.html?package=rearkdown) ![License](https://img.shields.io/npm/l/rearkdown.svg) [![contributors](https://img.shields.io/github/contributors/anilsenay/rearkdown.svg)](https://img.shields.io/github/contributors/anilsenay/rearkdown)
 
 # Rearkdown
 
@@ -8,6 +8,7 @@ Rearkdown is a react component for using your custom component in markdown files
 
 ```bash
 npm install rearkdown
+# yarn add rearkdown
 ```
 
 ## Usage
@@ -59,7 +60,7 @@ look like:
 
 ## Props
 
-- `file` - a markdown file you imported
+- `file`<sup>required</sup> - a markdown file you imported
 - `components` - An object of components to import your component into markdown file
 - `overrides` - Assign new components to default html tags
 - `options` - Other options which markdown-to-jsx provides. (forceBlock, forceInline etc.)
