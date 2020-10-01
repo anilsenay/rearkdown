@@ -8,6 +8,7 @@ Rearkdown is a react component for using your custom component in markdown files
 
 ```bash
 npm install rearkdown
+# yarn add rearkdown
 ```
 
 ## Usage
